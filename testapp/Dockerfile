@@ -1,4 +1,4 @@
-FROM node:6.9.1
+FROM node:9.8.0-alpine
 
 # Copy package.json file to docker image.
 COPY package.json /app/
@@ -13,6 +13,3 @@ RUN npm install --production
 COPY app.js /app
 
 CMD ["node", "app"]
-
-# Expose port
-EXPOSE 3000
